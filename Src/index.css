@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+.dark body {
+  @apply bg-zinc-950 text-zinc-100;
+}
+
+.dark .bg-white {
+  @apply bg-zinc-900 border-zinc-800;
+}
+
+.dark .text-gray-900, .dark .text-gray-800, .dark .text-emerald-800 {
+  @apply text-zinc-100;
+}
+
+.dark .text-gray-700, .dark .text-gray-600 {
+  @apply text-zinc-300;
+}
+
+.dark .text-gray-500, .dark .text-gray-400 {
+  @apply text-zinc-500;
+}
+
+.dark .bg-gray-50, .dark .bg-emerald-50 {
+  @apply bg-zinc-800 border-zinc-700;
+}
+
+.dark .border-gray-100, .dark .border-gray-200, .dark .border-emerald-100, .dark .border-emerald-200 {
+  @apply border-zinc-800;
+}
+
+.dark input, .dark select, .dark textarea {
+  @apply bg-zinc-800 border-zinc-700 text-zinc-100;
+}
+
+.dark .shadow-sm, .dark .shadow-md, .dark .shadow-lg {
+  @apply shadow-none;
+}
+
+/* Wheel Picker Styles */
+.wheel-container {
+  height: 150px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: y mandatory;
+}
+
+.wheel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.wheel-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  transition: all 0.2s;
+}
